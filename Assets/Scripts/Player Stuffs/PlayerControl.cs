@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        OnGround = true;
+        OnGround = false;
         _rb = GetComponent<Rigidbody>();
         _count = 0;
     }

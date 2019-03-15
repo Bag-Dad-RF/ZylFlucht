@@ -14,10 +14,11 @@ public class Pause : MonoBehaviour
     private bool isShowing;
     private bool paused = false;
     private bool hide = true;
+    public bool CanPauseNotDead = true;
 
     private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
+    {       
+        if (Input.GetButtonDown("Pause") && CanPauseNotDead)
         {
             paused = togglePause();
             isShowing = !isShowing;

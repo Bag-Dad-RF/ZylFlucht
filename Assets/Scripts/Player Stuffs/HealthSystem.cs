@@ -9,6 +9,8 @@ public class HealthSystem : MonoBehaviour
     public int NumOfHearts;
 
     public bool NotInvincible;
+    public static bool CanPauseNotDead;
+    public static bool dead;
     
     public UnityEngine.UI.Image[] Hearts;
  
@@ -19,8 +21,8 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         NotInvincible = true;
+        dead = false;
     }
-
 
     void FixedUpdate()
     {
@@ -52,8 +54,7 @@ public class HealthSystem : MonoBehaviour
 
         if (Health == 0)
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            dead = true;
         }
     }
 
