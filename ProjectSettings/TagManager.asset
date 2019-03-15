@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - Low
-  - SanicBoi
-  - Bad
-  - Ground
-  - Low
-  - SanicBoi
-  - JumpPower
-  - Target
+  tags: [Ground, Low, SanicBoi, Bad, Ground, Low, SanicBoi, JumpPower]
   layers:
   - Default
   - TransparentFX
