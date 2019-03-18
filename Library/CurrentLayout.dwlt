@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 67
+  controlID: 69
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 68
+  controlID: 70
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 69
+  controlID: 71
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,24 +382,24 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1600}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 60bfffff70bfffff10d4ffffead4ffff22d6ffff34d6ffff3e4800004c480000a2490000004c00009e4d000012520000fa5300007654000088540000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 08faffff
+      m_LastClickedID: -1528
+      m_ExpandedIDs: b0f9ffff90faffffd2fbffffb81e0000c61e000080280000c2280000f0280000e82a0000fa2a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: SmokeEffect
+        m_OriginalName: SmokeEffect
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -5624
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -425,8 +425,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
-      type: 0}
+    m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -441,9 +440,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 386.67166, y: -50.38153, z: -1.7811584}
+    m_Target: {x: -21.016394, y: -16.687386, z: 1.6627066}
     speed: 2
-    m_Value: {x: 386.67166, y: -50.38153, z: -1.7811584}
+    m_Value: {x: -21.016394, y: -16.687386, z: 1.6627066}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -471,9 +470,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.15469314, y: 0.046836868, z: -0.007340734, w: -0.98682445}
+    m_Target: {x: -0.14990266, y: 0.67295647, z: -0.14202556, w: -0.7102729}
     speed: 2
-    m_Value: {x: -0.15469314, y: 0.046836868, z: -0.007340734, w: -0.98682445}
+    m_Value: {x: -0.14990266, y: 0.67295647, z: -0.14202556, w: -0.7102729}
   m_Size:
     m_Target: 57.354103
     speed: 2
@@ -634,20 +633,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/EffectExamples/Smoke & Steam Effects/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/EffectExamples/Smoke & Steam Effects/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/unity3/Downloads/ZylFlucht
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 688}
-    m_SelectedIDs: 623e0000
-    m_LastClickedID: 15970
-    m_ExpandedIDs: 0000000092380000543a0000c03a0000b03c0000243e0000223f0000b03f0000e03f0000d8400000dc4000000a4100000c4100007441000014420000d6430000ee4300000e44000014440000cc4400004c4500005c45000034460000324700005a5b00005c5b000000ca9a3b
+    scrollPos: {x: 0, y: 127}
+    m_SelectedIDs: 320e0000
+    m_LastClickedID: 3634
+    m_ExpandedIDs: 00000000320e00000e100000701000004a120000c6130000921500008c16000092160000c2160000c41600002e170000ce17000096190000b0190000d4190000da190000a41a0000221b0000321b00000e1c00001a1d00001e4e0000204e0000224e0000244e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -675,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000092380000543a0000b03c0000243e0000223f0000b03f0000d8400000dc4000000a4100000c41000074410000d6430000cc4400004c4500005c450000344600005a5b00005c5b0000
+    m_ExpandedIDs: 00000000320e00000e100000701000004a120000c6130000921500008c16000092160000c2160000c41600002e170000ce17000096190000b0190000d4190000da190000a41a0000221b0000321b00000e1c00001a1d00001e4e0000204e0000224e0000244e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
