@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     
     private int _count;
 
+    // Sets variables
     void Start()
     {
         OnGround = false;
@@ -25,6 +26,7 @@ public class PlayerControl : MonoBehaviour
         _count = 0;
     }
 
+    // Allows movement with movement keys and jump.
     void FixedUpdate()
     {
         Speed = PowerUps.Speed;
@@ -45,20 +47,16 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    // Allows jump when colliding with ground
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             OnGround = true;
         }
-
-        if (other.gameObject.CompareTag("Low"))
-        {
-           Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
     }
 
+    // Allows jump when staying on ground.
     private void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -67,6 +65,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    // Stops ability to jump when not touching ground.
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"));

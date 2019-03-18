@@ -17,11 +17,13 @@ public class Death : MonoBehaviour
     private bool stop;
     private bool hide = true;
 
+    // Takes dead from health script when it activates and sets dead in this script to the one in health.
     private void FixedUpdate()
     {
         dead = HealthSystem.dead;
     }
 
+    // Shows the death menu when dead is true and starts toggle dead function.
     private void Update()
     {      
         if (dead)
@@ -33,6 +35,7 @@ public class Death : MonoBehaviour
         }
     }
     
+    // Stops time when dead.
     bool toggledead()
     {
         if (Time.timeScale == 0f)
@@ -47,6 +50,7 @@ public class Death : MonoBehaviour
         }
     }
     
+    // Restarts game when button on death menu is clicked, hides menu, and activates time.
     public void Restart()
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -62,9 +66,11 @@ public class Death : MonoBehaviour
         }
     }
     
+    // Quits back to title menu, hides death menu, and resumes time.
     public void Quit()
     {
         SceneManager.LoadScene("Title Screne");
+        
         stop = toggledead();
         isShowing = !isShowing;
         deathmenu.SetActive(isShowing);

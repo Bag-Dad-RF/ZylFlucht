@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour
     public bool NotInvincible;
     public static bool CanPauseNotDead;
     public static bool dead;
+    public bool OverDose;
     
     public UnityEngine.UI.Image[] Hearts;
  
@@ -18,14 +19,18 @@ public class HealthSystem : MonoBehaviour
     public Sprite EmptyHeart;
 
 
+    // Sets bools.
     void Start()
     {
         NotInvincible = true;
         dead = false;
     }
 
+    // Sets the number of hearts and health and their interaction between each other so when health changes hearts do as well
     void FixedUpdate()
     {
+        OverDose = PowerUps.Overdose;
+        
         if (Health > NumOfHearts)
         {
             Health = NumOfHearts;
@@ -52,12 +57,20 @@ public class HealthSystem : MonoBehaviour
             }
         }
 
+        // Sets dead to true when health equals zero so death menu script can start.
+        
+        if (OverDose)
+        {
+            Health = 0;
+        }
+        
         if (Health == 0)
         {
             dead = true;
         }
     }
 
+    // Deceases health when colliding with an enemy and give invincibility frames and kills you when you fall.
     private IEnumerator OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bad"))
@@ -66,8 +79,14 @@ public class HealthSystem : MonoBehaviour
             NotInvincible = false;
             yield return new WaitForSeconds((float) .8);
         }
+        
+        if (other.gameObject.CompareTag("Low"))
+        {
+            Health = 0;
+        }
     }
 
+    // Decreases health when staying on enemy after invincibility frames stop from initial hit.
     private IEnumerator OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Bad") && NotInvincible)

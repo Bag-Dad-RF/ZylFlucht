@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PowerUps : MonoBehaviour
@@ -7,14 +8,18 @@ public class PowerUps : MonoBehaviour
     
     public static float JumpHeight;
     public static float Speed;
+    public static bool Overdose;
 
 
+    // Sets variables
     private void Start()
     {
         JumpHeight = 17;
         Speed = 50;
+        Overdose = false;
     }
 
+    // Sets the power ups and what they do.
     IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("JumpPower"))
@@ -41,12 +46,13 @@ public class PowerUps : MonoBehaviour
         if (other.gameObject.CompareTag("Cocaine"))
         {
             other.gameObject.SetActive(false);
-            Speed = 125;
-            JumpHeight = 25;
-            yield return new WaitForSeconds(10);
+            Speed = 170;
+            JumpHeight = 50;
+            yield return new WaitForSeconds(5);
             Speed = 50;
             JumpHeight = 17;
-            
+            Overdose = true;
+
         }
     }
 }
