@@ -152,6 +152,8 @@
     <Compile Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\Prefabs\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\Cable_Procedural_Simple.cs" />
+    <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\Cable_Procedural_Static.cs" />
     <Compile Include="Assets\Scripts\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\enemy.cs" />
@@ -244,6 +246,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+    <None Include="Assets\Real-Time Procedural Cable Simple\ReadmeSimpleCable.txt" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
     <None Include="Assets\Shaders\Blend SM3.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
@@ -259,6 +262,7 @@
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Real-Time Procedural Cable Simple\ReadmeStaticCable.txt" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
