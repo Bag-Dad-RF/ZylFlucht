@@ -189,6 +189,7 @@
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\Projectors\Guidelines.txt" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\SpaceZeta_Spotlight\Info.txt" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
     <None Include="Assets\Materials\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
