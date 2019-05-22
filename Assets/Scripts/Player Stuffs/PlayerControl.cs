@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Image = UnityEngine.Experimental.UIElements.Image;
@@ -13,18 +15,23 @@ public class PlayerControl : MonoBehaviour
     public float JumpHeight;
     
     public bool OnGround;
+    public static bool Fade;
+    public static bool Temp;
 
     private Rigidbody _rb;
     
     private int _count;
 
+    // Sets variables
     void Start()
     {
-        OnGround = true;
+        OnGround = false;
         _rb = GetComponent<Rigidbody>();
         _count = 0;
+        Fade = false;
     }
 
+    // Allows movement with movement keys and jump.
     void FixedUpdate()
     {
         Speed = PowerUps.Speed;
@@ -45,33 +52,55 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    // Allows jump when colliding with ground
+    private IEnumerable OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             OnGround = true;
         }
-
-        if (other.gameObject.CompareTag("Low"))
+        
+        if (other.gameObject.CompareTag("Platform"))
         {
-           Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            OnGround = true;
+            transform.parent = other.transform;
+        }
+        
+        if (other.gameObject.CompareTag("Next Scene"))
+        {
+            Fade = true;
+            yield return new WaitForSeconds((float) .5);
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("S1L2");
         }
     }
 
+    // Allows jump when staying on ground.
     private void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             OnGround = true;
         }
+        
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            OnGround = true;
+            transform.parent = other.transform;
+        }
     }
 
+    // Stops ability to jump when not touching ground.
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"));
         {
             OnGround = false;
         }
+        
+        if(other.gameObject.CompareTag("Platform"))
+            OnGround = false;
+            transform.parent = null;
     }
+
 }

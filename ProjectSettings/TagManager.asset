@@ -13,6 +13,8 @@ TagManager:
   - SanicBoi
   - JumpPower
   - Target
+  - Next Scene
+  - Platform
   layers:
   - Default
   - TransparentFX

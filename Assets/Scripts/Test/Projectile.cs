@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
 public class Projectile : MonoBehaviour
 
@@ -15,20 +13,8 @@ public class Projectile : MonoBehaviour
         {
             Destroy(projectile);
         }
+        
 
     }
 
-    void Update()
-    {
-        Destroytimer();
-    }
-
-    private void Destroytimer()
-    {
-        Destroy(projectile,100);
-    }
-
-    
-    
 }
-

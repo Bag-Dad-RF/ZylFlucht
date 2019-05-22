@@ -14,10 +14,12 @@ public class Pause : MonoBehaviour
     private bool isShowing;
     private bool paused = false;
     private bool hide = true;
+    public bool CanPauseNotDead = true;
 
+    // Brings up pause menu and hides it when esc is pressed and you are not dead. Also starts toggle pause function.
     private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
+    {       
+        if (Input.GetButtonDown("Pause") && CanPauseNotDead)
         {
             paused = togglePause();
             isShowing = !isShowing;
@@ -25,6 +27,8 @@ public class Pause : MonoBehaviour
         }
     }
 
+    
+    // Stops time and starts it again
     bool togglePause()
     {
         if (Time.timeScale == 0f)
@@ -39,6 +43,7 @@ public class Pause : MonoBehaviour
         }
     }
 
+    // Restarts game when button on menu is clicked, hides menu, and activates time.
     public void Restart()
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -54,6 +59,7 @@ public class Pause : MonoBehaviour
         }
     }
 
+    // Quits back to title menu, hides death menu, and resumes time.
     public void Quit()
     {
         SceneManager.LoadScene("Title Screne");
@@ -67,6 +73,7 @@ public class Pause : MonoBehaviour
         }
     }
 
+    // Alternative to esc. Hides menu and starts time when clicked.
     public void Continue()
     {
         paused = togglePause();

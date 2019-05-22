@@ -12,7 +12,6 @@ public class NormalProjectile : BaseProjectile
 		if (fired)
 		{
 			transform.position += _direction * (speed * Time.deltaTime);
-			StartCoroutine(fired);
 
 		}
 		
